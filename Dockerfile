@@ -1,7 +1,7 @@
 FROM debian:buster-slim
 LABEL MAINTAINER="Julie Ng <azure@julie.io>"
 
-ARG AZ_CLI_VERSION=2.14.0-1~buster
+ARG AZ_CLI_VERSION=2.26.0-1~buster
 ARG AZ_DEVOPS_VERSION=0.18.0
 ARG TERRAFORM_VERSION=1.0.6
 ARG DEBIAN_FRONTEND=noninteractive
@@ -34,7 +34,7 @@ RUN curl -sL https://packages.microsoft.com/keys/microsoft.asc | \
     apt-get install azure-cli=${AZ_CLI_VERSION} && \
     apt-get install azure-cli --no-upgrade && \
     az --version && \
-    az extension add --name azure-devops --version ${AZ_DEVOPS_VERSION} && \
+    # az extension add --name azure-devops --version ${AZ_DEVOPS_VERSION} && \
     az extension list -o table
 
 # Install Terraform
