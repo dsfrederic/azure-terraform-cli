@@ -1,7 +1,7 @@
 FROM debian:buster-slim
 LABEL MAINTAINER="Julie Ng <azure@julie.io>"
 
-ARG AZ_CLI_VERSION=2.26.0-1~buster
+ARG AZ_CLI_VERSION=2.14.0-1~buster
 ARG AZ_DEVOPS_VERSION=0.18.0
 ARG TERRAFORM_VERSION=1.0.6
 ARG DEBIAN_FRONTEND=noninteractive
